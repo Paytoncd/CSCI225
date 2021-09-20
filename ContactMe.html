@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div>
+        <iframe name="video" width="560" height="315" src="https://www.youtube.com/embed/IsXEVQRaTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+    </div>
+    <br>
+    <br>
+    <div>
+    <h1>Feedback</h1>
+    </div>  
+    <form name="Feedback" action="/action_page.php" method="get">
+        <fieldset>
+    <label for="fname">First name:</label>
+    <input type="text" name="fname" placeholder="anonymous" attribute="required">
+    <label for="lname">Last name:</label>
+    <input type="text" name="lname" placeholder="anonymous" attribute="required">
+    Email:<input type="text" name="mail" placeholder="name@domain.com">
+    <br>
+    <br>
+    <p>Would you recommend this website?</p>
+    <input type="radio" name="option" value="yes">Yes<br>
+    <input type="radio" name="option" value="no">No<br>
+    <br>
+    <label for="Favorite Website">Choose your favorite website:</label>
+    <select name="Favorite Website" id="Favorite Website">
+        <option value="Google">Google</option>
+        <option value="Youtube" selected>Youtube</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Facebook">Facebook</option>
+    </select>
+    <br>
+    <p>Rating:</p>
+    <input type="range" name="rating" min="1" max="10">
+    <br>
+    <br>
+    <textarea name="comment" cols="40" rows="20">Additional comments</textarea>
+    <br>
+    <br>
+    <input type="Submit" name="submit" value="Submit">
+    <input type="reset" name="reset" value="Reset">
+    </fieldset>
+</form> 
+
+
+
+</body>
+</html>
