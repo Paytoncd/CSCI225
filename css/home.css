@@ -1,0 +1,158 @@
+
+html{
+	background-color: hsla(145, 35%, 89%,0.9);
+	padding:5%;
+  }
+  
+  body{
+	  background-color: hsla(190,51%,65%,0.5);
+	  color:hsla(180,100%,100%,0.9);
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'Tangerine';
+    font-style: normal;
+    font-weight: 400;
+    src:
+		url(https://fonts.gstatic.com/s/tangerine/v9/IurY6Y5j_oScZZow4VOxCZZM.woff2) format('woff2');
+}
+
+
+
+
+div.text{
+	position: fixed;
+	margin-left: 0px;
+	float: left;
+	border: solid 2px #ccc;
+	padding: 5px;
+	max-width: 800px;
+}
+
+
+div.image{
+	float: right;
+    height: 200px;
+    margin-top: 20px;
+	margin-right: 0;
+	
+}
+
+div.portfolio{
+	margin-top: 200px;
+	border-right: 0;
+	border-bottom-style: 3px solid #fff;
+	box-shadow: 1em 10px rgb(6, 124, 99);
+	
+}
+
+ 
+
+div.wrapper li {
+	
+	width:150px;
+    height:inherit;
+    display:inline-block;
+	margin-top: 0;
+	zoom:1;
+    *display:inline;
+	
+	
+}
+
+div.navbar li a {
+	
+	border: 2px solid blue;
+	border-radius: 5em;
+	display:block;
+	position: fixed;
+}
+
+div.Footer{
+	position: fixed;
+    margin-bottom: 0;
+	background-color: lightblue;
+	border: solid 2px #ccc;
+}
+
+div.Assignment {
+    position: absolute;
+    margin-left:60%;
+	margin-top: 150px;
+	width: 20%;
+	padding:5%;
+	
+}
+
+div.ContactInformation{
+	border-right: 0;
+	border-bottom-style: 3px solid #fff;
+}
+
+div.Schedule {
+	border-right: 0;
+	border-bottom-style: 3px solid #fff;
+	
+}
+
+
+h1{
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-shadow: black 0.1em 0.1em 0.3em;
+	display: inline-block;
+	}
+
+h1{ background-color: rgb(29, 190, 211);
+	-webkit-transition: ease-in-out 3s, background-color 3s; 
+	-moz-transition: ease-in-out 3s, background-color 3s; 
+	}
+	
+h1:hover { 
+		background-color: rgb(10, 80, 62); 
+	}
+
+
+h1:hover  {
+	transform: rotate(45deg);
+}
+	
+
+p{
+	line-height: 1.4em;
+	text-align: left;
+	border-style: solid;
+	border-color: rgb(6, 161, 172);
+	
+}
+
+p::first-letter{
+	color: greenyellow;
+}
+
+link {
+	text-decoration: none;
+	
+}
+
+a:hover {
+	color: hotpink;
+  }
+
+
+body{
+	background-image: url(../img/fall.jpg);
+}
+
+table, th, td {
+	border: 1px solid green;
+	padding: 5px;
+	vertical-align: 0;
+	empty-cells: hide;
+	background-color: lightslategrey;
+  }
+
+
+
