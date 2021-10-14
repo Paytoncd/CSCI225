@@ -1,4 +1,6 @@
 
+
+
 html{
 	background-color: hsla(145, 35%, 89%,0.9);
 	padding:5%;
@@ -15,6 +17,7 @@ html{
     font-family: 'Tangerine';
     font-style: normal;
     font-weight: 400;
+	color:rgb(6, 124, 99);
     src:
 		url(https://fonts.gstatic.com/s/tangerine/v9/IurY6Y5j_oScZZow4VOxCZZM.woff2) format('woff2');
 }
@@ -22,28 +25,22 @@ html{
 
 
 
-div.text{
-	position: fixed;
-	margin-left: 0px;
-	float: left;
-	border: solid 2px #ccc;
-	padding: 5px;
-	max-width: 800px;
-}
 
 
-div.image{
-	float: right;
-    height: 200px;
-    margin-top: 20px;
-	margin-right: 0;
+div.Introduction{
+	bottom: 0;
 	
 }
 
+img{
+	float: right;
+}
+
+
 div.portfolio{
-	margin-top: 200px;
+	margin-top: 100px;
 	border-right: 0;
-	border-bottom-style: 3px solid #fff;
+	border-bottom:rgb(6, 161, 172);
 	box-shadow: 1em 10px rgb(6, 124, 99);
 	
 }
@@ -62,15 +59,17 @@ div.wrapper li {
 	
 }
 
+
+
 div.navbar li a {
-	
-	border: 2px solid blue;
+	color: rgb(247, 131, 131);
+	border: 2px solid rgb(10, 143, 28);
 	border-radius: 5em;
 	display:block;
 	position: fixed;
 }
 
-div.Footer{
+footer{
 	position: fixed;
     margin-bottom: 0;
 	background-color: lightblue;
@@ -105,13 +104,16 @@ h1{
 	display: inline-block;
 	}
 
-h1{ background-color: rgb(29, 190, 211);
+h1{ 
+	color: black;
+	background-color: yellow;
 	-webkit-transition: ease-in-out 3s, background-color 3s; 
 	-moz-transition: ease-in-out 3s, background-color 3s; 
-	}
+	
+}
 	
 h1:hover { 
-		background-color: rgb(10, 80, 62); 
+		background-color: lightgreen; 
 	}
 
 
@@ -123,8 +125,8 @@ h1:hover  {
 p{
 	line-height: 1.4em;
 	text-align: left;
-	border-style: solid;
-	border-color: rgb(6, 161, 172);
+
+	
 	
 }
 
@@ -138,16 +140,18 @@ link {
 }
 
 a:hover {
-	color: hotpink;
+	color: yellow;
   }
 
 
 body{
-	background-image: url(../img/fall.jpg);
+	background-image: url(../img/stripe.jpg);
+
+	
 }
 
 table, th, td {
-	border: 1px solid green;
+	border: 1px solid lightgreen;
 	padding: 5px;
 	vertical-align: 0;
 	empty-cells: hide;

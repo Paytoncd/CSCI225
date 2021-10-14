@@ -1,50 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+<link rel="stylesheet" href="css/contact.css">
+
+<title>Contact Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style type="text/css" media="all">
+            @import url('css/contact.css');
+
+
+        .wrapper {
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
+          }
+      
+          nav {
+            grid-column: 1/3;
+            grid-row: 1/2;
+          }
+      
+          sidebar {
+            grid-column: 1/ 2;
+            grid-row: 2/3;
+          }
+      
+          main{
+            grid-column: 2/3;
+            grid-row: 2/3;
+          }
+          </style>
+    </head>
+
+
 <body>
-    <div>
-        <iframe name="video" width="560" height="315" src="https://www.youtube.com/embed/IsXEVQRaTX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary"> 
         
+        <ul>
+            <li><a href="https://www.usca.edu">Link to USCA website </a>
+                <abbr title="USCA website"></abbr>
+            </li>
+            
+            <li><a href="#AssignmentSection">Assignment Section</a></li>
+            
+            <li><a href="#ContactInformationSection ">Contact Info Section</a></li>
+           
+            <li><a href="https://www.facebook.com/">Link to Facebook</a></li>
+        
+            <li><a href="https://www.instagram.com/">Link to Instagram</a></li>
+            
+        </ul>
+        <p id ="clip"></p>
+        <script>
+            setInterval(update, 100); 
+  
+            function update(){
+                navigator.clipboard.readText().then(text => document.getElementById('clip').textContent = text);
+             }
+        </script>
+    
+        </nav>
+    </div> 
+    
+    <div class="font-italic">Here is a video on why web development is very beneficial.</div>
+    
+    <sidebar>
+        <p>
+            <iframe width="450" height="315" src="https://www.youtube.com/embed/JguKLogoGMk" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </p>
+      </sidebar>
+    
+   
+    <br>
+    <br>
+   
+    
+    
+    
+   <main>
+    <div class="MyForm">
+    <div class="form-group">
+    <form name="Feedback" action="/action_page.php" method="get" id="Feedback" >
+        <label>First name: <input type="text" class="form-control" name="fname" size="30" maxlength="100"
+            required placeholder="anonymous"></label>
+        <label>Last name: <input type="text" class="form-control" name="lname" size="30" maxlength="100"
+             required placeholder="anonymous"></label><br />
     </div>
-    <br>
-    <br>
-    <div>
-    <h1>Feedback</h1>
-    </div>  
-    <form name="Feedback" action="/action_page.php" method="get">
-        <fieldset>
-    <label for="fname">First name:</label>
-    <input type="text" name="fname" placeholder="anonymous" attribute="required">
-    <label for="lname">Last name:</label>
-    <input type="text" name="lname" placeholder="anonymous" attribute="required">
-    Email:<input type="text" name="mail" placeholder="name@domain.com">
-    <br>
-    <br>
-    <p>Would you recommend this website?</p>
-    <input type="radio" name="option" value="yes">Yes<br>
-    <input type="radio" name="option" value="no">No<br>
-    <br>
+    <div class="form-group">
+    <label>Email: <input type="email" class="form-control" name="email" 
+        placeholder="name@domain.com" required size="69" maxlength="100"></label><br />
+    </div>
+    <div class="form-group">
+    <label>Would you recommend this website?</label>
+    <div class="form-check">
+      <input type="radio" id="r1" class="form-check-input" name="rating" value="yes" />
+      <label for="r1" class="form-check-label">Yes</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="rating" value="no" />
+      <label class="form-check-label"> No</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="rating" value="maybe" />
+      <label class="form-check-label">Maybe</label>
+    </div>
+    
+    
+    </div>
     <label for="Favorite Website">Choose your favorite website:</label>
-    <select name="Favorite Website" id="Favorite Website">
+    <select name="Favorite Website" id="Favorite Website" class="form-control">
         <option value="Google">Google</option>
         <option value="Youtube" selected>Youtube</option>
         <option value="Twitter">Twitter</option>
         <option value="Facebook">Facebook</option>
     </select>
     <br>
-    <p>Rating:</p>
-    <input type="range" name="rating" min="1" max="10">
+    <br>
+    <div class="rating" id="Rating">Rating
+    <input type="range" name="rating" min="1" max="10" class="form-range">
+    </div>
+    
+    <br>
+    <br> 
+    <p>
+        <label class="form-check-label" for="comments">Additional comments:</label><br />
+        <textarea rows="6" cols="70" id="comments" class="form-control"></textarea>
+      </p>
     <br>
     <br>
-    <textarea name="comment" cols="40" rows="20">Additional comments</textarea>
+    <div class="username">
+        <label for="inputUsername5">Username:</label>
+        <input type="username" id="inputUsername5" class="form-control">
+    </div>
+    
+    
+    <div class="password">
+        <label for="inputPassword5">Password:</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+        Your password must be 8-20 characters long
+        </small>
+>   </div> 
     <br>
     <br>
-    <input type="Submit" name="submit" value="Submit">
+    <input type="Submit" name="submit" value="Submit" class="btn btn-primary">
     <input type="reset" name="reset" value="Reset">
-    </fieldset>
-</form> 
+    </div>
+    
+   
 
-
+    </form> 
+    </div>
+ </main>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
 </body>
 </html>
