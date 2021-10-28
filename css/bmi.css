@@ -1,0 +1,47 @@
+
+img{
+margin-left: 600px;
+width: 200px;
+height: 200px;
+}
+
+.bar {
+    width: 800px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #b3b3b3;
+    color: white;
+    text-align: center;
+    margin-top: -200px;
+    float: right;
+}
+
+.underweight1 {
+    width: 200px;
+    height: 100%;
+    background-color: green;
+    float: left; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+}
+
+.normal-weight {
+    width: 200px;
+    height: 100%;
+    background-color: orange;
+    float: left; 
+}
+
+.overweight1 {
+    width: 200px;
+    height: 100%;
+    background-color: red;
+    float: left;
+}
+
+.obese1 {
+    width: 200px;
+    height: 100%;
+    background-color: blue;
+    float: left;
+}

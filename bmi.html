@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+    
+        
+        <!-- Jquery library   ---->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    
+</head>
+
+
+<body>
+    
+<div class="bmicalc" >
+    <h1>BMI Calculator</h1>
+<form>
+    <label><input type="text" class="form-control" id="fname" size="30" maxlength="100"
+        required placeholder="Enter your name"></label>
+    <br>
+    <p id="message">
+
+    </p>
+    <br>
+    <label><input type="float" class="form-control" id="weight" 
+        required placeholder="Enter your weight">Weight in Pounds</label>
+    <br>
+    <br>
+    <label><input type="float" class="form-control" id="height"
+        required placeholder="Enter your height">Height in Inches</label>
+    <br>
+    <br>
+    <label for="Age">Age</label>
+    <select name="Age" id="age" class="form-control">
+        <option value="19 below" id="young">19 &below</option>
+        <option value="20-40" >20-40</option>
+        <option value="41-60">41-60</option>
+        <option value="61-80">61-80</option>
+        <option value="80+">80+</option>
+       
+    </select>
+    <p id="message1">
+
+    </p>
+    
+    <br>
+    <br>
+
+    <input type="button" onclick="bmi()" value="compute BMI">
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    Category: <input type="text" id="category">
+    <label id="ans"></label>
+   
+    </form>
+
+
+    <div class="bar">
+        <div class="underweight1">
+            <p>underweight</p>
+        </div>
+        <div class="normal-weight">
+            <p>normal weight</p>
+        </div>
+        <div class="overweight1">
+            <p>overweight</p>
+        </div>
+        <div class="obese1">
+            <p>obese</p>
+        </div>
+    </div>
+
+
+    <script>
+        
+        function bmi() {
+            
+            var name = document.getElementById('fname').value;
+            document.getElementById('message').textContent="Welcome!! "+name;
+                
+            var nE = document.getElementById('fname');
+            nE.addEventListener('blur',bmi,false);
+             
+            var select = document.getElementById('young');
+           document.getElementById('message1').textContent="https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf";
+            
+            var r = document.getElementById('young');
+            r.addEventListener('blur',bmi,false);
+           
+            
+            
+            var w = parseFloat(document.getElementById("weight").value); 
+            var h = parseFloat(document.getElementById("height").value); 
+            var finalWeight = w * .45;
+            var finalHeight = h * .025;
+
+            var b = 0;
+            var b = (finalWeight / Math.pow(finalHeight, 2));
+            var b = b.toFixed(2);
+
+            document.getElementById("ans").innerHTML ="Your bmi is " +b;
+
+
+          
+              
+      
+    
+    
+     if (b < 18.5)
+    {
+        document.getElementById("category").value = "Underweight";
+        document.querySelector('#mii').animate([{width: '200px',height: '200px'},{width: '75px',height: '200px'}],
+        {duration:2000, fill:"forwards"});
+    }
+    else if (b >= 18.5 && b <= 25)
+    {
+        document.getElementById("category").value = "Healthy weight";
+    }
+    else if (b > 25 && b <= 30)
+    {
+        document.getElementById("category").value = "Overweight";
+        document.querySelector('#mii').animate([{width: '200px',height: '200px'},{width: '300px',height: '200px'}],
+        {duration:2000, fill:"forwards"});
+        window.alert("You are overweight!");
+        setTimeout( function() { window.location = "http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm" }, 4000 );
+      
+    }
+    else if (b > 30 && b <= 35)
+    {
+        document.getElementById("category").value = "Obese Class 1";
+        document.querySelector('#mii').animate([{width: '200px',height: '200px'},{width: '350px',height: '200px'}],
+        {duration:2000, fill:"forwards"});
+        window.alert("You are in Obese Class 1!");
+        setTimeout( function() { window.location = "http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm" }, 4000 );
+        
+    }
+    else if(b > 35 && b <= 40)
+    {
+        document.getElementById("category").value = "Obese Class 2";
+        document.querySelector('#mii').animate([{width: '200px',height: '200px'},{width: '400px',height: '200px'}],
+        {duration:2000, fill:"forwards"});
+        window.alert("You are in Obese Class 2!");
+        setTimeout( function() { window.location = "http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm" }, 4000 );
+        
+    }
+    else 
+    {
+        document.getElementById("category").value = "Obese Class 3";
+        document.querySelector('#mii').animate([{width: '200px',height: '200px'},{width: '450px',height: '200px'}],
+        {duration:2000, fill:"forwards"});
+        window.alert("You are in Obese Class 3!");
+        setTimeout( function() { window.location = "http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm" }, 4000 );
+   
+    }
+
+   /* if(age=="#young"){
+        document.getElementById("young").value = "Underage";
+        window.alert("Use BMI Percentile Chart!");
+        window.location = "https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf";
+    } */
+   
+      
+
+}
+    
+
+        
+
+ 
+    
+
+        
+    
+
+            
+       
+       </script>
+
+</div>
+
+
+<div class="miiimg">
+    <img src="img/Mii.jpg" id="mii" alt="MII">
+</div>
+
+
+
+
+
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="css/bmi.css">
+
+</body>
+
+
+
+
+
+
+</html>
